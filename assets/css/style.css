@@ -1,0 +1,40 @@
+body {
+    background-color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    width: 980px;
+    margin: 0 auto 0 auto;
+    border: 1px solid #cccccc;
+}
+
+h1 {
+    font-size: 44px;
+    font-weight: bold;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px dashed;
+    margin: 0 25px;
+}
+
+h2 {
+    padding: 25px;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+h3 {
+    padding: 25px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#the-array {
+    letter-spacing: .3rem;
+}
+
+/* #game {
+    display: none;
+} */
