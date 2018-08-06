@@ -1,0 +1,84 @@
+body {
+    background-color: #101010;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    padding: 50px 0;
+    font-size: 5rem;
+    text-align: center;
+
+    background: -webkit-linear-gradient(rgb(163, 0, 14), rgb(56, 1, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stroke {
+    -webkit-text-stroke: 1px #494949;
+   color: white;
+   text-shadow: 1px 1px 0 rgb(23, 15, 15), -1px -1px 0 rgb(156, 0, 0), 1px -1px 0 #494949, -1px 1px 0 #000, 1px 1px 0 #494949;
+}
+
+/* .header {
+
+	font-size: 6rem;
+	font-weight:  100;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #ad0000;
+    background-image: -webkit-linear-gradient(92deg,rgb(88, 0, 0),rgb(163, 0, 14));
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+} */
+
+.freckle-face {
+    font-family: 'Freckle Face', cursive;
+}
+
+.lylas {
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.frijole {
+    font-family: 'Frijole', cursive;
+}
+
+.eater {
+    font-family: 'Eater', cursive;
+}
+
+.nosifer {
+    font-family: 'Nosifer', cursive;
+}
+
+.chonburi {
+    font-family: 'Chonburi', cursive;
+}
+
+.geostar {
+    font-family: 'Geostar Fill', cursive;
+}
+
+.trade-winds {
+    font-family: 'Trade Winds', cursive;
+}
+
+.wallpoet {
+    font-family: 'Wallpoet', cursive;
+}
+
