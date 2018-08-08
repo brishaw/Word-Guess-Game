@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -25,10 +26,29 @@
             </section> -->
             <section id="game">
                 <article>
+                    <h1>THE WORD!</h1>
+                    <h1 id="word"></h1>
+                </article>
+                <article>
                     <h1>HANGMAN!</h1>
-                    <h2>YOUR GUESSES</h2>
-                    <h3 class="choice"><span id="player-guesses"></span></h3>
-                    <h3><span id="the-array"></span></h3>
+                    <h2>GUESSES</h2>
+                    <h4>WRONG: <span id="no-of-guesses"></span></h4>
+                    <h4 class="choice">CHOICE: <span id="player-guesses"></span></h4>
+                    <h4>GUESSED: <span id="the-array"></span></h4>
+                </article>
+                <article>
+                    <figure class="hangman">
+                        <img id="head" src="assets/images/head.png" alt="hangman graphic" />
+                        <img id="body" src="assets/images/body.png" alt="hangman graphic" />
+                        <img id="right_arm" src="assets/images/right_arm.png" alt="hangman graphic" />
+                        <img id="left_arm" src="assets/images/left_arm.png" alt="hangman graphic" />
+                        <img id="right_leg" src="assets/images/right_leg.png" alt="hangman graphic" />
+                        <img id="left_leg" src="assets/images/left_leg.png" alt="hangman graphic" />
+                        <img id="right_eye" src="assets/images/right_eye.png" alt="hangman graphic" />
+                        <img id="left_eye" src="assets/images/left_eye.png" alt="hangman graphic" />
+                        <img id="nose" src="assets/images/nose.png" alt="hangman graphic" />
+                        <img id="mouth" src="assets/images/mouth.png" alt="hangman graphic" />
+                    </figure>
                 </article>
             </section>
         </div>
