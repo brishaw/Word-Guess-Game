@@ -25,13 +25,16 @@
                 </article>
             </section> -->
             <section id="game">
+                
+                <embed id="intro-song" src="assets/sound/ForWhomTheBellTolls.mp3" autostart="true" loop="true" hidden="false">
+                <button onclick="noAudio()">Sound</button>
+
                 <article>
                     <h1>THE WORD!</h1>
                     <h1 id="word"></h1>
                 </article>
                 <article>
                     <h1>HANGMAN!</h1>
-                    <h2 type="input">PRESS A KEY TO START PLAYING!</h2>
                     <h2>GUESSES</h2>
                     <h4>WRONG: <span id="no-of-guesses"></span></h4>
                     <h4 class="choice">CHOICE: <span id="player-guesses"></span></h4>

@@ -1,6 +1,9 @@
 // opening screen //
 
-
+function noAudio() {
+    var x = document.getElementById("intro-song");
+    x.style.visibility = "visible";
+}
 
 // word bank
 
@@ -22,15 +25,15 @@ console.log("choice split: " + choiceSplit); //remove this
 
 // add underscores to match number of letters in computers guess
 
-var progressWord = [];
+var playerWord = [];
 
 for (var i = 0; i < choiceSpaces; i++) {
 
-    progressWord.push("_");
+    playerWord.push("_");
 }
 
 // ***************************
-//var fabet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
+//var bet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
 
 
 
@@ -44,7 +47,7 @@ var gameWord = document.getElementById("word");
 
 // show the clue on the screeen, the join() takes the commas out
 
-gameWord.textContent = progressWord.join(" ");
+gameWord.textContent = playerWord.join(" ");
 
 
 // number player guesses
@@ -97,14 +100,14 @@ document.onkeyup = function(event) {
 
                 if(choiceSplit[i] == playerChoice) {
 
-                    progressWord[i] = choiceSplit[i];
+                    playerWord[i] = choiceSplit[i];
 
                 }
                 
                 
             }
-            gameWord.textContent = progressWord.join(" ");
-            console.log(progressWord);
+            gameWord.textContent = playerWord.join(" ");
+            console.log(playerWord);
 
         } else {
 
@@ -145,11 +148,12 @@ document.onkeyup = function(event) {
 
         // check if the player won
 
-        if(progressWord.indexOf('_') == -1) {
+        if(playerWord.indexOf('_') == -1) {
             alert("win!");
+            location.reload();
         } else if(noOfGuesses > 9) {
             alert("you have lost the game");
-            
+            location.reload();
         }
 
 

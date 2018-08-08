@@ -4,6 +4,11 @@ body {
     color: #ffffff;
 }
 
+#intro-song {
+    position: absolute;
+    visibility: hidden;
+}
+
 .container {
     width: 980px;
     margin: 0 auto 0 auto;
@@ -37,47 +42,73 @@ h3 {
 
 .hangman {
     padding: 25px;
+    margin: 0 auto;
+    width: 200px;
     position: relative;
+}
+
+.hangman img {
+    position: absolute;
 }
 
 #head {
     display: none;
+    top: 0;
+    left: 25px;
 }
 
 #body {
     display: none;
+    top: 230px;
+    left: 140px;
 }
 
 #right_arm {
     display: none;
+    top: 270px;
+    left: 140px;
 }
 
 #left_arm {
     display: none;
+    top: 270px;
+    left: -25px;
 }
 
 #right_leg {
     display: none;
+    top: 470px;
+    left: 31px;
 }
 
 #left_leg {
     display: none;
+    top: 470px;
+    left: 140px;
 }
 
 #right_eye {
     display: none;
+    top: 100px;
+    left: 90px;
 }
 
 #left_eye {
     display: none;
+    top: 100px;
+    left: 170px;
 }
 
 #nose {
     display: none;
+    top: 140px;
+    left: 130px;
 }
 
 #mouth {
     display: none;
+    top: 180px;
+    left: 110px;
 }
 
 
