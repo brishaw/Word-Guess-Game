@@ -75,14 +75,15 @@ h3 {
 
 #word {
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
+    left: 40%;
 }
 
 /* hangman image(s) */
 
 .hangman {
     padding: 25px;
-    margin: 0 auto;
+    margin: 170px auto 0 140px;
     width: 200px;
     position: relative;
 }
@@ -94,43 +95,43 @@ h3 {
 #head {
     display: none;
     top: 0;
-    left: 25px;
+    left: 60px;
 }
 
 #body {
     display: none;
-    top: 230px;
+    top: 160px;
     left: 140px;
 }
 
 #right_arm {
     display: none;
-    top: 270px;
+    top: 175px;
     left: 140px;
 }
 
 #left_arm {
     display: none;
-    top: 270px;
-    left: -25px;
+    top: 175px;
+    left: 25px;
 }
 
 #right_leg {
     display: none;
-    top: 470px;
-    left: 31px;
+    top: 320px;
+    left: 63px;
 }
 
 #left_leg {
     display: none;
-    top: 470px;
+    top: 320px;
     left: 140px;
 }
 
 #right_eye {
     display: none;
     top: 100px;
-    left: 90px;
+    left: 95px;
 }
 
 #left_eye {
@@ -141,7 +142,7 @@ h3 {
 
 #nose {
     display: none;
-    top: 140px;
+    top: 120px;
     left: 130px;
 }
 

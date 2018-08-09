@@ -200,7 +200,7 @@ document.onkeyup = function(event) {
 
             startHangman();
         }
-
+    
     } else {
 
         // not a valid letter
