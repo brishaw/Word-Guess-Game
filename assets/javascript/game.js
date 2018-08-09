@@ -1,9 +1,55 @@
 // opening screen //
 
-function noAudio() {
-    var x = document.getElementById("intro-song");
-    x.style.visibility = "visible";
-}
+// function noAudio() {
+//     var x = document.getElementById("intro-song");
+//     x.style.visibility = "visible";
+// }
+
+// Gets Link for Theme Song
+var audioElement = document.createElement("audio");
+audioElement.setAttribute("src", "assets/sound/ForWhomTheBellTolls.mp3");
+
+// Theme Button
+$(".theme-button").on("click", function () {
+    audioElement.play();
+});
+$(".pause-button").on("click", function () {
+    audioElement.pause();
+});
+
+var wins = 0;
+var losses = 0;
+
+function startHangman() {
+
+// hide the picture
+    // number player guesses
+
+    var noOfGuesses = 0;
+
+    if (noOfGuesses == 0) {
+        document.getElementById("head").style.display = "none";
+    
+        document.getElementById("body").style.display = "none";
+    
+        document.getElementById("right_arm").style.display = "none";
+   
+        document.getElementById("left_arm").style.display = "none";
+    
+        document.getElementById("right_leg").style.display = "none";
+    
+        document.getElementById("left_leg").style.display = "none";
+    
+        document.getElementById("right_eye").style.display = "none";
+    
+        document.getElementById("left_eye").style.display = "none";
+    
+        document.getElementById("nose").style.display = "none";
+    
+        document.getElementById("mouth").style.display = "none";
+    }
+
+
 
 // word bank
 
@@ -33,16 +79,8 @@ for (var i = 0; i < choiceSpaces; i++) {
 }
 
 // ***************************
-//var bet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
-
-
-
-// ***************************
 
 var gameWord = document.getElementById("word");
-// var str = gameWord.textContent = computerChoice;
-// var res = str.replace(computerChoice, "_");
-// gameWord.textContent = res;
  
 
 // show the clue on the screeen, the join() takes the commas out
@@ -50,9 +88,9 @@ var gameWord = document.getElementById("word");
 gameWord.textContent = playerWord.join(" ");
 
 
-// number player guesses
+// // number player guesses
 
-var noOfGuesses = 0;
+// var noOfGuesses = 0;
 
 // empty array to hold the player's guesses
 
@@ -61,7 +99,6 @@ var guess = [];
 // container to hold the array on the page
 
 var playerGuesses = document.getElementById("player-guesses");
-
 
 // player presses key
 
@@ -102,8 +139,7 @@ document.onkeyup = function(event) {
 
                     playerWord[i] = choiceSplit[i];
 
-                }
-                
+                }       
                 
             }
             gameWord.textContent = playerWord.join(" ");
@@ -113,10 +149,12 @@ document.onkeyup = function(event) {
 
             alert("boo");
 
+            var whoops = new Audio("laugh.mp3");
+            whoops.play();
             // increases the number of guesses (wrong)
 
             noOfGuesses++; 
-            document.getElementById("no-of-guesses").innerHTML = noOfGuesses;
+            document.getElementById("no-of-guesses").innerHTML = noOfGuesses + " out of 10";
             console.log(noOfGuesses);
 
             // show the pictures
@@ -143,29 +181,25 @@ document.onkeyup = function(event) {
                 document.getElementById("mouth").style.display = "block";
             }
 
-
         }
 
-        // check if the player won
+        // check if the player won or lost then play the game again
 
         if(playerWord.indexOf('_') == -1) {
             alert("win!");
-            location.reload();
+            wins++;
+            document.getElementById("wins").textContent = wins;
+            console.log("Wins: " + wins);
+            startHangman();
+
         } else if(noOfGuesses > 9) {
             alert("you have lost the game");
-            location.reload();
+            losses++
+            document.getElementById("losses").textContent = losses;
+            console.log("Losses: " + losses);
+
+            startHangman();
         }
-
-
-        // if ($.inArray(playerChoice, choiceSplit) >= 0) {
-            
-        //     console.log(playerChoice, choiceSplit);
-        
-        // } else {
-            
-        //     alert("booo");
-
-        // }
 
     } else {
 
@@ -175,3 +209,7 @@ document.onkeyup = function(event) {
     }
 
 }
+
+} // end hangman
+
+startHangman();
