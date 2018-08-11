@@ -112,7 +112,13 @@ document.onkeyup = function(event) {
         // alert("letter chosen!");
 
         // move chosen letter into empty array guess
-        guess.push(playerChoice);
+        if(guess.indexOf(playerChoice) != -1) {
+            
+            alert("You already chose that letter");
+
+        } else {
+            guess.push(playerChoice);
+        }
 
         // display the player's guess on the page
 
@@ -184,6 +190,8 @@ document.onkeyup = function(event) {
             wins++;
             document.getElementById("wins").textContent = wins;
             console.log("Wins: " + wins);
+            document.getElementById("the-array").innerHTML = "";
+            playerGuesses.textContent = "";
             startHangman();
 
         } else if(noOfGuesses === 0) {
@@ -191,6 +199,8 @@ document.onkeyup = function(event) {
             losses++
             document.getElementById("losses").textContent = losses;
             console.log("Losses: " + losses);
+            document.getElementById("the-array").innerHTML = "";
+            playerGuesses.textContent = "";
             startHangman();
         }
     
