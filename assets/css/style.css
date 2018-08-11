@@ -46,7 +46,7 @@ body {
 }
 
 .msg::before {
-    content: "This game needs to be played on a larger screen!";
+    content: "This game needs to be played on a screen wider than 992 pixels!";
 }
 
 .msg {
@@ -79,11 +79,6 @@ body {
 header {
     background-color: #1b0000;
     border-bottom: 1px solid rgba(1, 68, 21, 0.52);
-}
-
-.container {
-    /* width: 1080px;
-    margin: 0 auto 0 auto; */
 }
 
 #game {
@@ -134,10 +129,6 @@ footer {
 
 .mb-0 {
     margin-bottom: 0;
-}
-
-h1 {
-    /* text-align: center; */
 }
 
 h2 {
@@ -215,26 +206,26 @@ h3 {
 
 #right_eye {
     display: none;
-    top: 100px;
+    top: 80px;
     left: 95px;
 }
 
 #left_eye {
     display: none;
-    top: 100px;
+    top: 80px;
     left: 170px;
 }
 
 #nose {
     display: none;
-    top: 120px;
-    left: 130px;
+    top: 95px;
+    left: 133px;
 }
 
 #mouth {
     display: none;
-    top: 180px;
-    left: 110px;
+    top: 125px;
+    left: 119px;
 }
 
 @media only screen and (max-width: 992px) {

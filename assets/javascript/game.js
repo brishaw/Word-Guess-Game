@@ -1,10 +1,3 @@
-// opening screen //
-
-// function noAudio() {
-//     var x = document.getElementById("intro-song");
-//     x.style.visibility = "visible";
-// }
-
 // Gets Link for Theme Song
 var audioElement = document.createElement("audio");
 audioElement.setAttribute("src", "assets/sound/ForWhomTheBellTolls.mp3");
@@ -22,10 +15,11 @@ var losses = 0;
 
 function startHangman() {
 
-// hide the picture
-    // number player guesses
+    // number of guesses player has
 
     var noOfGuesses = 10;
+
+    // hide the picture
     
     document.getElementById("no-of-guesses").innerHTML = noOfGuesses;
 
@@ -50,8 +44,6 @@ function startHangman() {
     
         document.getElementById("mouth").style.display = "none";
     }
-
-
 
 // word bank
 
@@ -89,11 +81,6 @@ var gameWord = document.getElementById("word");
 
 gameWord.textContent = playerWord.join(" ");
 
-
-// // number player guesses
-
-// var noOfGuesses = 0;
-
 // empty array to hold the player's guesses
 
 var guess = [];
@@ -106,6 +93,12 @@ var playerGuesses = document.getElementById("player-guesses");
 
 document.onkeyup = function(event) {
 
+    // hide the top bar
+    document.getElementById("top-bar").style.display = "none";
+
+    // bring up the margin of the top-graphic
+    document.getElementById("top-graphic").style.paddingTop = "0";
+
     // key is stored in variable (as lower case???)
 
     var playerChoice = event.key.toLowerCase();
@@ -116,7 +109,7 @@ document.onkeyup = function(event) {
 
         // valid letter 
 
-        alert("letter chosen!");
+        // alert("letter chosen!");
 
         // move chosen letter into empty array guess
         guess.push(playerChoice);
@@ -126,14 +119,13 @@ document.onkeyup = function(event) {
         playerGuesses.textContent = playerChoice;
 
         //diplay all of player's guesses on the page
-        document.getElementById("the-array").innerHTML = guess;
-        
+        document.getElementById("the-array").innerHTML = guess;     
 
         // check to see if letter matches any of the letters in the computer's word
         
         if(choiceSplit.indexOf(playerChoice) != -1) { // should i use < 0???
 
-            alert("yeah!");
+            // alert("yeah!");
 
             for(var i = 0; i < choiceSpaces; i++) {
 
@@ -149,7 +141,7 @@ document.onkeyup = function(event) {
 
         } else {
 
-            alert("boo");
+            // alert("boo");
 
             var whoops = new Audio("laugh.mp3");
             whoops.play();
@@ -188,18 +180,17 @@ document.onkeyup = function(event) {
         // check if the player won or lost then play the game again
 
         if(playerWord.indexOf('_') == -1) {
-            alert("win!");
+            alert("You Win!");
             wins++;
             document.getElementById("wins").textContent = wins;
             console.log("Wins: " + wins);
             startHangman();
 
         } else if(noOfGuesses === 0) {
-            alert("you have lost the game");
+            alert("You have lost the game!");
             losses++
             document.getElementById("losses").textContent = losses;
             console.log("Losses: " + losses);
-
             startHangman();
         }
     
