@@ -1,79 +1,7 @@
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
-}
-
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-  padding: 60px 15px 0;
-}
-
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
-}
-
-/* --------------------------
-
----------------------------- */
 body {
     background-color: #000000;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
-}
-
-.msg::before {
-    content: "This game needs to be played on a larger screen!";
-}
-
-.msg {
-    padding: 10px;
-    margin: 10px;
-    display: none;
-    border: 3px solid darkred;
-    color: #ffffff;
-    z-index: 1010;
-}
-
-.center {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.cover {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: #000000;
-    display: none;
 }
 
 header {
@@ -82,12 +10,12 @@ header {
 }
 
 .container {
-    /* width: 1080px;
-    margin: 0 auto 0 auto; */
+    width: 1080px;
+    margin: 0 auto 0 auto;
 }
 
 #game {
-    background: url(../images/tunnel_800b.png) center center no-repeat;
+    background: url(../images/tunnel_800.png) 45px center no-repeat;
     height: 770px;
 }
 
@@ -123,21 +51,8 @@ footer {
    text-shadow: 1px 1px 0 rgb(23, 15, 15), -1px -1px 0 rgb(156, 0, 0), 1px -1px 0 #494949, -1px 1px 0 #000, 1px 1px 0 #494949;
 }
 
-.header-background, .footer-background {
-    background-color: #1b0000;
-    border-bottom: 1px solid rgba(1, 68, 21, 0.52);
-}
-
-.p-4202 {
-    padding: 4rem 2rem 0rem 2rem;
-}
-
-.mb-0 {
-    margin-bottom: 0;
-}
-
 h1 {
-    /* text-align: center; */
+    text-align: center;
 }
 
 h2 {
@@ -161,7 +76,7 @@ h3 {
 #word {
     position: absolute;
     bottom: 40px;
-    left: 30%;
+    left: 40%;
 }
 
 /* hangman image(s) */
@@ -236,15 +151,3 @@ h3 {
     top: 180px;
     left: 110px;
 }
-
-@media only screen and (max-width: 992px) {
-    
-    .msg {
-        display: block;
-    }
-
-    .cover {
-        display: block;
-    }
-}
-

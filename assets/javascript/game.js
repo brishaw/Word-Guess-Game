@@ -25,9 +25,11 @@ function startHangman() {
 // hide the picture
     // number player guesses
 
-    var noOfGuesses = 0;
+    var noOfGuesses = 10;
+    
+    document.getElementById("no-of-guesses").innerHTML = noOfGuesses;
 
-    if (noOfGuesses == 0) {
+    if (noOfGuesses == 10) {
         document.getElementById("head").style.display = "none";
     
         document.getElementById("body").style.display = "none";
@@ -153,31 +155,31 @@ document.onkeyup = function(event) {
             whoops.play();
             // increases the number of guesses (wrong)
 
-            noOfGuesses++; 
-            document.getElementById("no-of-guesses").innerHTML = noOfGuesses + " out of 10";
+            noOfGuesses--; 
+            document.getElementById("no-of-guesses").innerHTML = noOfGuesses;
             console.log(noOfGuesses);
 
             // show the pictures
 
-            if(noOfGuesses == 1) {
+            if(noOfGuesses == 9) {
                 document.getElementById("head").style.display = "block";
-            } else if(noOfGuesses == 2) {
+            } else if(noOfGuesses == 8) {
                 document.getElementById("body").style.display = "block";
-            } else if(noOfGuesses == 3) {
+            } else if(noOfGuesses == 7) {
                 document.getElementById("right_arm").style.display = "block";
-            } else if(noOfGuesses == 4) {
+            } else if(noOfGuesses == 6) {
                 document.getElementById("left_arm").style.display = "block";
             } else if(noOfGuesses == 5) {
                 document.getElementById("right_leg").style.display = "block";
-            } else if(noOfGuesses == 6) {
+            } else if(noOfGuesses == 4) {
                 document.getElementById("left_leg").style.display = "block";
-            } else if(noOfGuesses == 7) {
+            } else if(noOfGuesses == 3) {
                 document.getElementById("right_eye").style.display = "block";
-            } else if(noOfGuesses == 8) {
+            } else if(noOfGuesses == 2) {
                 document.getElementById("left_eye").style.display = "block";
-            } else if(noOfGuesses == 9) {
+            } else if(noOfGuesses == 1) {
                 document.getElementById("nose").style.display = "block";
-            } else if(noOfGuesses == 10) {
+            } else if(noOfGuesses == 0) {
                 document.getElementById("mouth").style.display = "block";
             }
 
@@ -192,7 +194,7 @@ document.onkeyup = function(event) {
             console.log("Wins: " + wins);
             startHangman();
 
-        } else if(noOfGuesses > 9) {
+        } else if(noOfGuesses === 0) {
             alert("you have lost the game");
             losses++
             document.getElementById("losses").textContent = losses;
