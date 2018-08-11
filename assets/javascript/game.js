@@ -142,8 +142,9 @@ document.onkeyup = function(event) {
                 }       
                 
             }
+
             gameWord.textContent = playerWord.join(" ");
-            console.log(playerWord);
+            //console.log(playerWord);
 
         } else {
 
