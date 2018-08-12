@@ -152,9 +152,11 @@ document.onkeyup = function(event) {
 
             var whoops = new Audio("laugh.mp3");
             whoops.play();
-            // increases the number of guesses (wrong)
 
+            // decreases the number of guesses left by 1
+        
             noOfGuesses--; 
+           
             document.getElementById("no-of-guesses").innerHTML = noOfGuesses;
             console.log(noOfGuesses);
 
